@@ -48,4 +48,30 @@ ccnumberstring = input('enter the credit card you would like to check, ')
 checkcc("ccnumberstring")
 
 
+#Second part of task:
+
+# GTIN-13 check digits are calculated as follows:
+# Multiply every second digit by 3, and every other digit by 1.
+# Add up all the multiplied numbers.
+# You can now get the check digit by working out what number would have to be added to the sum 
+# in order to bring it up to a multiple of 10. 
+# If the number is already a multiple of 10, the check digit is 0.
+
+
+
+def checkgtin13(stringof):
+    evennums =[]
+    oddnums = []
+    for indexitem in range(len(stringof)):
+        if indexitem %2 ==0:
+            evenmultiply =int(stringof[indexitem])
+            evennums.append(evenmultiply)
+        
+        else:
+            oddmultiply =int(stringof[indexitem]) *3
+            oddnums.append(oddmultiply)
+    total_odds_and_evens = sum(sum(evennums)) + (sum(oddnums)
+
+stringof = input('enter the barcode of 13 digits,') #still working on this
+checkgtin13('stringof')
 
