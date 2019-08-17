@@ -18,7 +18,7 @@ doubleevennum = []
 
 
 def checkcc(string):
-    for indexitem in range(len(ccnumberstring)):
+    for indexitem in range(len(ccnumberstring[-1])): #working right to left
         if indexitem %2 ==0:
             evennum =int(ccnumberstring[indexitem]) *2
             if evennum > 9:
@@ -47,6 +47,14 @@ def checkcc(string):
 ccnumberstring = input('enter the credit card you would like to check, ')
 checkcc("ccnumberstring")
 
+# codes to check for task1:
+# 4111111111111111
+# 4012000033330026
+# 4005519200000004
+# 4788250000028291
+# 4005550000000010
+
+
 
 #Second part of task:
 
@@ -59,19 +67,19 @@ checkcc("ccnumberstring")
 
 
 
-def checkgtin13(stringof):
-    evennums =[]
-    oddnums = []
-    for indexitem in range(len(stringof)):
-        if indexitem %2 ==0:
-            evenmultiply =int(stringof[indexitem])
-            evennums.append(evenmultiply)
+# def checkgtin13(stringof):
+#     evennums =[]
+#     oddnums = []
+#     for indexitem in range(len(stringof)):
+#         if indexitem %2 ==0:
+#             evenmultiply =int(stringof[indexitem])
+#             evennums.append(evenmultiply)
         
-        else:
-            oddmultiply =int(stringof[indexitem]) *3
-            oddnums.append(oddmultiply)
-    total_odds_and_evens = sum(sum(evennums)) + (sum(oddnums)
+#         else:
+#             oddmultiply =int(stringof[indexitem]) *3
+#             oddnums.append(oddmultiply)
+#     total_odds_and_evens = sum(sum(evennums)) + (sum(oddnums)
 
-stringof = input('enter the barcode of 13 digits,') #still working on this
-checkgtin13('stringof')
+# stringof = input('enter the barcode of 13 digits,') #still working on this
+# checkgtin13('stringof')
 
